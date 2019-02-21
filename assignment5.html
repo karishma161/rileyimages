@@ -1,0 +1,70 @@
+ <DOCTYPE html>
+<head>
+
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style type="text/css">
+
+</style>
+
+<body>
+	<canvas id="c" width="300px" height="300px"></canvas>
+
+
+	<script type="text/javascript">
+
+			var c = document.getElementById('c');
+			var ctx = c.getContext('2d');
+			ctx.translate(0.5, 0.5);
+			ctx.lineWidth = 10;
+
+			ctx.strokeStyle = 'black';
+
+			ctx.beginPath();
+			for (var y = 18; y < 300; y += 18) {
+			    addLineSubPath(ctx, y);
+			}
+			ctx.stroke();
+
+			function addLineSubPath(ctx, y) {
+			   ctx.moveTo(0, y);
+			   ctx.lineTo(300, y);
+			}
+			
+
+      ctx.lineWidth = 1;
+      ctx.beginPath();+
+			ctx.moveTo(150, 18);
+			ctx.quadraticCurveTo(0, 150, 150, 300);
+      ctx.fillStyle = 'white';
+      
+      ctx.fill();
+     
+			ctx.stroke();
+
+
+			ctx.beginPath();
+			ctx.moveTo(150, 18);
+			ctx.quadraticCurveTo(300, 150, 150, 300);
+      ctx.fillStyle = 'white';
+      ctx.fill();
+			ctx.stroke();
+ctx.translate(0.5, 0.5);
+			ctx.lineWidth = 10;
+
+			ctx.strokeStyle = 'black';
+
+			ctx.beginPath();
+			for (var y = 15; y < 300; y += 18) {
+			    addLineSubPath(ctx, y);
+			}
+			ctx.stroke();
+
+			function addLineSubPath(ctx, y) {
+			   ctx.moveTo(0, y);
+			   ctx.lineTo(300, y);
+			}
+
+	</script>
+
+</body>
